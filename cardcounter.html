@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+     <title>Card Counter</title>
+     <link rel="stylesheet" type="text/css" href="cardcounter.css">
+  </head>
+  <body style="background-color: white">
+    <div class="nodisplay">
+       <img src="Card_back_01.png" id="backImg"/>
+       <img src="English_pattern_playing_cards_deck.png" id="deckImg" onload = "initCanvas()"/>
+    </div>
+    <div>
+        <canvas id="cardDisplay" width="240" height="360"></canvas>
+                                   <div class = "controls">
+                                     <div class = "speedWrapper">
+                                       <label for "slider" id="speedLabel">Speed: </label>
+                                        <input type="range" min="0" max="10" value="5" class="slider" name="slider" id="speedInput" onchange="changeSpeed()">
+                                        <p>
+                                          <span class="btn" onclick="runClicked();" id="runBtn">Run</span>
+                                          <span class="btn" onclick="reset();">Reset</span>
+                                          <span class="btn" onmouseover="showCount();" onmouseout="showText()" id="countBtn">Hover to View Count</span>
+                                        </p>
+                                     </div>
+                                   </div>
+    </div>
+    <script type="text/javascript" src="cardcounter.js"></script>
+  </body>
+</html>
